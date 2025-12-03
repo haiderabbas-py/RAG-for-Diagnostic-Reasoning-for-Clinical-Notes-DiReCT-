@@ -46,32 +46,6 @@ python src/index_data.py --data-dir data --index-file data/index_bm25.pkl
 streamlit run app/app.py
 ```
 
----
 
-## Design notes
 
-This repo includes both a light-weight **BM25 retriever** and a template for **dense retrieval** using sentence-transformers + FAISS. The generator module shows how to use an open-source LLM (Hugging Face) or an API-backed model (OpenAI) — configurable in `src/config.py`.
 
-The Streamlit app demonstrates:
-- Accepting a clinical query
-- Showing top retrieved documents
-- Generating an answer using retrieved context + a prompt template
-
----
-
-## Files to review first
-- `app/app.py` — Streamlit frontend
-- `src/retriever.py` — BM25 and dense retriever templates
-- `src/generator.py` — Prompt assembly and generation wrappers
-- `src/preprocessing.py` — Data cleaning and chunking
-- `docs/Medium_Post.md` & `docs/LinkedIn_Post.md` — Draft posts
-
----
-
-## Ethical & Privacy
-This project uses clinical data. Follow your institution's IRB / data governance rules. Anonymize any PHI and **never** publish protected health information in public repos. Use synthetic or de-identified data for demos.
-
----
-
-## License
-MIT. See `LICENSE`.
