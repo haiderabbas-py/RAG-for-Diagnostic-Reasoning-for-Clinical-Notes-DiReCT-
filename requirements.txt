@@ -1,0 +1,12 @@
+streamlit>=1.20
+transformers>=4.30
+sentence-transformers>=2.2
+faiss-cpu>=1.7.4
+rank_bm25>=0.2.2
+datasets>=2.13
+torch>=2.0
+tqdm
+numpy
+pandas
+scikit-learn
+python-dotenv
